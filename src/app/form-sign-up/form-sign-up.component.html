@@ -1,0 +1,61 @@
+<form [formGroup]="formSignUp" (submit)="createAccount()">
+<div class="main-signup">
+  <app-menu-bar class="menu-bar"></app-menu-bar>
+  <div class="container-form">
+    <mat-card>
+      <div class="grid">
+        <label>formulaire d'inscription</label>
+
+        <mat-form-field class="custom-width">
+          <input type="text"  matInput placeholder="Pseudo" maxlength="12" formControlName="pseudo" required >
+        </mat-form-field>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of errorMessages.pseudo">
+            <div class="error-message" *ngIf="formSignUp.get('pseudo').hasError(error.type) && (formSignUp.get('pseudo').dirty || formSignUp.get('pseudo').touched)">
+            {{error.message}}
+            </div>
+          </ng-container>
+        </div>
+
+        <mat-form-field class="custom-width">
+          <input type="mail"  name="mail" email="true" matInput placeholder="Mail" formControlName="mail" required >
+        </mat-form-field>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of errorMessages.mail">
+            <div class="error-message" *ngIf="formSignUp.get('mail').hasError(error.type) && (formSignUp.get('mail').dirty || formSignUp.get('mail').touched)">
+              {{error.message}}
+            </div>
+          </ng-container>
+        </div>
+
+        <mat-form-field  class="custom-width">
+          <input type="password"  name="password" matInput placeholder="Mot de Passe" formControlName="password" required >
+        </mat-form-field>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of errorMessages.password">
+            <div class="error-message" *ngIf="formSignUp.get('password').hasError(error.type) && (formSignUp.get('password').dirty || formSignUp.get('password').touched)">
+              {{error.message}}
+            </div>
+          </ng-container>
+        </div>
+
+        <mat-form-field  class="custom-width">
+          <input class="password" type="password" matInput placeholder="Confirmation du mot de passe" formControlName="confirmPassword" required >
+        </mat-form-field>
+        <div class="error-messages">
+          <ng-container *ngFor="let error of errorMessages.confirmPassword">
+            <div class="error-message" *ngIf="formSignUp.get('confirmPassword').hasError(error.type) && (formSignUp.get('confirmPassword').dirty || formSignUp.get('confirmPassword').touched)">
+              <!--Form Error - {{formSignUp.errors | json}}-->
+            </div>
+          </ng-container>
+        </div>
+        <pre>
+        <!--{{formSignUp.invalid | json}}-->
+        </pre>
+
+        <button mat-stroked-button class="m20 mt50 custom-button" [disabled]="!formSignUp.valid">S'INSCRIRE</button>
+      </div>
+    </mat-card>
+  </div>
+</div>
+</form>

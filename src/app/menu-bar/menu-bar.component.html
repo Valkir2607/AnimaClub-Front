@@ -1,0 +1,27 @@
+<div class="top-menu">
+    <div class="navigation montserrat">
+
+       <button mat-button (mouseleave)="beforeMenu" routerLink="">Accueil</button>
+      <button mat-button [matMenuTriggerFor]="belowMenu">Animation</button>
+      <mat-menu #belowMenu="matMenu" yPosition="below">
+        <button mat-menu-item routerLink="animes">Animes</button>
+        <button mat-menu-item>Calendrier Saisonnier</button>
+        <button mat-menu-item>Personnages d'Anime</button>
+      </mat-menu>
+
+      <button mat-button [matMenuTriggerFor]="beforeMenu">Manga</button>
+      <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button mat-menu-item>Mangas</button>
+        <button mat-menu-item>Personnages de Manga</button>
+      </mat-menu>
+
+
+      <button mat-button>Actualité</button>
+    </div>
+
+    <div class="crendentials">
+      <button mat-stroked-button class="shadow" routerLink="/inscription">S'INSCRIRE</button>
+      <button mat-stroked-button class="signup" routerLink="/connexion">SE CONNECTER</button>
+    </div>
+
+</div>

@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-button {
+  padding: 10px 30px!important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mat-button-wrapper {
+  font-size: 1.25em;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+.m10{
+  margin: 10px 0!important;
+}
+.m20{
+  margin: 20px 0!important;
+}
+
+.m30{
+  margin: 30px 0!important;
+}
+
+.m50{
+  margin: 50px 0!important;
+}
+
+.mt50{
+  margin-top: 50px!important;
+}
+
+.monserrat>button {
+  font-family: 'arial', sans-serif;
+}
+
+
+// over material
+
+

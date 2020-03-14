@@ -1,0 +1,48 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+.example-container > * {
+  width: 100%;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.container-form {
+  display: flex;
+  width: 600px;
+  margin: 0 auto;
+  height: 90.3vh;
+  align-items: center;
+}
+.main-signup {
+  background-image: url("../ressources/images/inscription.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center px;
+}
+label {
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  color: #6d4532;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+.custom-width {
+  width: 600px!important;
+}
+.mat-card {
+  background: rgba(251, 201, 159, 0.61);
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(245, 237, 228, 0.9) 40%);
+  border: 2px solid #ccb1a5
+}
+
+.custom-button{
+  padding: 10px 0;
+  background-color: #40201452;
+  color: #3e261b;
+}

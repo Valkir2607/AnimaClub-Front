@@ -1,0 +1,35 @@
+<form [formGroup]="formSignIn" (submit)="handleLogin()">
+  <div class="main-signin">
+    <app-menu-bar class="menu-bar"></app-menu-bar>
+    <div class="container-form">
+      <mat-card>
+        <div class="grid">
+          <label>Connexion</label>
+
+          <mat-form-field class="custom-width">
+            <input type="text" matInput placeholder="Pseudo" maxlength="12" formControlName="pseudo" required >
+          </mat-form-field>
+          <div class="error-messages">
+            <ng-container *ngFor="let error of errorMessages.pseudo">
+              <div class="error-message" *ngIf="formSignIn.get('pseudo').hasError(error.type) && (formSignIn.get('pseudo').dirty || formSignIn.get('pseudo').touched)">
+                {{error.message}}
+              </div>
+            </ng-container>
+          </div>
+
+          <mat-form-field class="custom-width">
+            <input type="password" name="password" matInput placeholder="Mot de Passe" formControlName="password" required >
+          </mat-form-field>
+          <div class="error-messages">
+            <ng-container *ngFor="let error of errorMessages.password">
+              <div class="error-message" *ngIf="formSignIn.get('password').hasError(error.type) && (formSignIn.get('password').dirty || formSignIn.get('pseudo').touched)">
+                {{error.message}}
+              </div>
+            </ng-container>
+          </div>
+          <button mat-stroked-button class="m20 mt50 custom-button" [disabled]="!formSignIn.valid">SE CONNECTER</button>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</form>

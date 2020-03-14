@@ -1,0 +1,42 @@
+.top-menu{
+  box-shadow: 0 0 7px 3px #000000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+
+  background-color: #0000009e;
+  color: wheat;
+  z-index: 5;
+  padding: 10px 0;
+
+}
+.crendentials >button {
+  margin-right: 15px;
+}
+.shadow{
+  background-color: #42512e;
+  color: #fafafa!important;
+  transition: all ease-in 120ms;
+}
+.shadow:hover {
+  box-shadow: 0 4px 8px 0px #000000;
+  transition: all ease-in 200ms;
+}
+
+.mat-button-wrapper{
+  color: #333333;
+}
+
+.signup {
+  transition: 100ms all ease-in;
+}
+
+.signup:hover{
+  background-color: #667b48;
+  transition: 160ms all ease-in;
+}
+
+
+
